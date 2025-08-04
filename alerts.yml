@@ -1,0 +1,18 @@
+    # Simple whitelist denial alert
+    - Trigger: com.destroystokyo.paper.event.profile.ProfileWhitelistVerifyEvent
+      Channel: shields
+      Conditions:
+        - "#event.isWhitelistEnabled()"
+        - "!#event.isWhitelisted()"
+      Embed:
+        Color: "#ff6b6b"
+        Title: "Denied."
+        Description: |
+          **DENIED!**
+          
+          **Reason:** Not whitelisted
+          **Time:** {time}
+          **Player:** ${#event.getPlayerProfile().getName()}'s connection attempt
+        Footer:
+          Text: "Serverscanner gang is NOT allowed"
+        Timestamp: true
