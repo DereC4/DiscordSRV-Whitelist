@@ -13,7 +13,7 @@
           **Reason:** Not whitelisted
           **Time:** {time}
           **Player:** ${#event.getPlayerProfile().getName()}'s connection attempt
-          **UUID** ${#event.getPlayerProfile().getId()}
+          **UUID:** ${#event.getPlayerProfile().getId()}
         Footer:
           Text: "Serverscanner gang is NOT allowed"
         Timestamp: true
